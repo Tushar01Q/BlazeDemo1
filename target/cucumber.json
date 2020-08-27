@@ -1,0 +1,179 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9976092000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User initiate the Chrome Driver and login to the application url \"https://blazedemo.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://blazedemo.com/",
+                  "offset": 66
+                }
+              ],
+              "location": "BlazeDemo.launchingApp(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "Validation of happy flow of flight booking and Confirmation ID",
+        "description": "",
+        "id": "flight-booking-validation-in-blaze-portal;validation-of-happy-flow-of-flight-booking-and-confirmation-id;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2872874500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User select \"Portland\" and \"Rome\" and click on \"Find Flights\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Portland",
+                  "offset": 13
+                },
+                {
+                  "val": "Rome",
+                  "offset": 28
+                },
+                {
+                  "val": "Find Flights",
+                  "offset": 48
+                }
+              ],
+              "location": "BlazeDemo.CitySelection(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 580225200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User select any random flight by click on \"Choose This Flight\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Choose This Flight",
+                  "offset": 43
+                }
+              ],
+              "location": "BlazeDemo.user_select_any_particular_flight_by_click_on_button(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8870884100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User fills the Passenger details and click on \"Purchase Flight\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Purchase Flight",
+                  "offset": 47
+                }
+              ],
+              "location": "BlazeDemo.passengerDetails(String,DataTable)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Name",
+                  "Address",
+                  "City",
+                  "State",
+                  "ZipCode",
+                  "CreditCardNo",
+                  "Month",
+                  "Year",
+                  "NameOnCard"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "John",
+                  "123 Park Avenue",
+                  "California",
+                  "Texas",
+                  "98335",
+                  "1234 5678 1133 4455",
+                  "09",
+                  "2018",
+                  "John P Carter"
+                ],
+                "line": 12
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 73072400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User validate the Confirmation Id and \"Thank you for your purchase today!\" in Flight Confirmation Screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Thank you for your purchase today!",
+                  "offset": 39
+                }
+              ],
+              "location": "BlazeDemo.validateConfirmationID(String)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@BlazeDemo_TC01"
+          }
+        ]
+      }
+    ],
+    "name": "Flight Booking validation in Blaze Portal",
+    "description": "",
+    "id": "flight-booking-validation-in-blaze-portal",
+    "keyword": "Feature",
+    "uri": "FeatureFile/BlazeDemo.feature"
+  }
+]
