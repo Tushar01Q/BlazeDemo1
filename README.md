@@ -3,6 +3,8 @@ Please change the Feature file name in TestRunner class :
 -- To run Web Code, please give value >> features = "FeatureFile/BlazeDemo.feature",
 -- To run API Code, please give Value >> features = "FeatureFile/APICheck.feature",
 
+MVN command to run this code based on selected feature file --
+mvn clean test -Dxml=testng -P web
 
 Web Automation --
 1. Test Cases are written in BDD format in Feature file "BlazeDemo" placed under FeatureFile folder
