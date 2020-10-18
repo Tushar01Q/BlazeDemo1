@@ -9,7 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
 @CucumberOptions(
-features = "FeatureFile/BlazeDemo.feature",
+features = "FeatureFile/APICheck.feature",
 glue = "com.automation.stepDefs",
 //dryRun=true,
 monochrome = true,

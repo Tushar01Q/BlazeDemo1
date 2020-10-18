@@ -1,269 +1,297 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("FeatureFile/BlazeDemo.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("FeatureFile/APICheck.feature");
 formatter.feature({
   "line": 1,
-  "name": "Flight Booking validation in Blaze Portal",
+  "name": "API Validation",
   "description": "",
-  "id": "flight-booking-validation-in-blaze-portal",
+  "id": "api-validation",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "line": 7,
-  "name": "Validation of happy flow of flight booking and Confirmation ID",
+  "line": 5,
+  "name": "Validation of Status Code and different-2 Responses when Endpoint is Valid",
   "description": "",
-  "id": "flight-booking-validation-in-blaze-portal;validation-of-happy-flow-of-flight-booking-and-confirmation-id",
+  "id": "api-validation;validation-of-status-code-and-different-2-responses-when-endpoint-is-valid",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 6,
-      "name": "@BlazeDemo_TC01"
+      "line": 4,
+      "name": "@SpaceX_APICheck_ValidEndPoint_TC01"
     }
   ]
 });
 formatter.step({
-  "line": 8,
-  "name": "User select \"\u003cDeparture City\u003e\" and \"\u003cDestination City\u003e\" and click on \"\u003cFind Flight\u003e\" button",
+  "line": 6,
+  "name": "User is hitting the API for \"\u003cEnd point\u003e\" and Valid Http Method Type",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 9,
-  "name": "User select any random flight by click on \"\u003cChoosing Flight\u003e\" button",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 10,
-  "name": "User fills the Passenger details and click on \"\u003cPurchase flight\u003e\"",
-  "rows": [
-    {
-      "cells": [
-        "Name",
-        "Address",
-        "City",
-        "State",
-        "ZipCode",
-        "CreditCardNo",
-        "Month",
-        "Year",
-        "NameOnCard"
-      ],
-      "line": 11
-    },
-    {
-      "cells": [
-        "John",
-        "123 Park Avenue",
-        "California",
-        "Texas",
-        "98335",
-        "1234 5678 1133 4455",
-        "09",
-        "2018",
-        "John P Carter"
-      ],
-      "line": 12
-    }
-  ],
+  "line": 7,
+  "name": "User is validating certain attributes in http Response",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 13,
-  "name": "User validate the Confirmation Id and \"\u003cConfirmation Message\u003e\" in Flight Confirmation Screen",
-  "keyword": "And "
-});
 formatter.examples({
-  "line": 14,
+  "line": 8,
   "name": "",
   "description": "",
-  "id": "flight-booking-validation-in-blaze-portal;validation-of-happy-flow-of-flight-booking-and-confirmation-id;",
+  "id": "api-validation;validation-of-status-code-and-different-2-responses-when-endpoint-is-valid;",
   "rows": [
     {
       "cells": [
-        "Departure City",
-        "Destination City",
-        "Find Flight",
-        "Choosing Flight",
-        "Purchase flight",
-        "Confirmation Message"
+        "End point",
+        "Http Method"
       ],
-      "line": 15,
-      "id": "flight-booking-validation-in-blaze-portal;validation-of-happy-flow-of-flight-booking-and-confirmation-id;;1"
+      "line": 9,
+      "id": "api-validation;validation-of-status-code-and-different-2-responses-when-endpoint-is-valid;;1"
     },
     {
       "cells": [
-        "Portland",
-        "Rome",
-        "Find Flights",
-        "Choose This Flight",
-        "Purchase Flight",
-        "Thank you for your purchase today!"
+        "https://api.spacexdata.com/v4/launches/latest",
+        "GET"
       ],
-      "line": 16,
-      "id": "flight-booking-validation-in-blaze-portal;validation-of-happy-flow-of-flight-booking-and-confirmation-id;;2"
+      "line": 10,
+      "id": "api-validation;validation-of-status-code-and-different-2-responses-when-endpoint-is-valid;;2"
     }
   ],
   "keyword": "Examples"
 });
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "User initiate the Chrome Driver and login to the application url \"https://blazedemo.com/\"",
-  "keyword": "Given "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "https://blazedemo.com/",
-      "offset": 66
-    }
-  ],
-  "location": "BlazeDemo.launchingApp(String)"
-});
-formatter.result({
-  "duration": 9976092000,
-  "status": "passed"
-});
 formatter.scenario({
-  "line": 16,
-  "name": "Validation of happy flow of flight booking and Confirmation ID",
+  "line": 10,
+  "name": "Validation of Status Code and different-2 Responses when Endpoint is Valid",
   "description": "",
-  "id": "flight-booking-validation-in-blaze-portal;validation-of-happy-flow-of-flight-booking-and-confirmation-id;;2",
+  "id": "api-validation;validation-of-status-code-and-different-2-responses-when-endpoint-is-valid;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 6,
-      "name": "@BlazeDemo_TC01"
+      "line": 4,
+      "name": "@SpaceX_APICheck_ValidEndPoint_TC01"
     }
   ]
 });
 formatter.step({
-  "line": 8,
-  "name": "User select \"Portland\" and \"Rome\" and click on \"Find Flights\" button",
+  "line": 6,
+  "name": "User is hitting the API for \"https://api.spacexdata.com/v4/launches/latest\" and Valid Http Method Type",
   "matchedColumns": [
-    0,
-    1,
-    2
+    0
   ],
   "keyword": "Given "
 });
 formatter.step({
-  "line": 9,
-  "name": "User select any random flight by click on \"Choose This Flight\" button",
-  "matchedColumns": [
-    3
+  "line": 7,
+  "name": "User is validating certain attributes in http Response",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "https://api.spacexdata.com/v4/launches/latest",
+      "offset": 29
+    }
   ],
-  "keyword": "When "
+  "location": "APICheck.ApiRun(String)"
+});
+formatter.result({
+  "duration": 2418787400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "APICheck.ResponseValidation()"
+});
+formatter.result({
+  "duration": 546540800,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 14,
+  "name": "Validation of Status Code and API Response when Endpoint is Not Valid",
+  "description": "",
+  "id": "api-validation;validation-of-status-code-and-api-response-when-endpoint-is-not-valid",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 13,
+      "name": "@SpaceX_APICheck_InvalidEndPoint_TC02"
+    }
+  ]
 });
 formatter.step({
-  "line": 10,
-  "name": "User fills the Passenger details and click on \"Purchase Flight\"",
-  "matchedColumns": [
-    4
-  ],
+  "line": 15,
+  "name": "User is hitting the API for \"\u003cEnd point\u003e\" and Valid Http Method Type",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 16,
+  "name": "User is validating HTTP Response",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 17,
+  "name": "",
+  "description": "",
+  "id": "api-validation;validation-of-status-code-and-api-response-when-endpoint-is-not-valid;",
   "rows": [
     {
       "cells": [
-        "Name",
-        "Address",
-        "City",
-        "State",
-        "ZipCode",
-        "CreditCardNo",
-        "Month",
-        "Year",
-        "NameOnCard"
+        "End point",
+        "Http Method"
       ],
-      "line": 11
+      "line": 18,
+      "id": "api-validation;validation-of-status-code-and-api-response-when-endpoint-is-not-valid;;1"
     },
     {
       "cells": [
-        "John",
-        "123 Park Avenue",
-        "California",
-        "Texas",
-        "98335",
-        "1234 5678 1133 4455",
-        "09",
-        "2018",
-        "John P Carter"
+        "https://api.spacexdata.com/v4/launches/latesW7t",
+        "GET"
       ],
-      "line": 12
+      "line": 19,
+      "id": "api-validation;validation-of-status-code-and-api-response-when-endpoint-is-not-valid;;2"
     }
   ],
-  "keyword": "Then "
+  "keyword": "Examples"
+});
+formatter.scenario({
+  "line": 19,
+  "name": "Validation of Status Code and API Response when Endpoint is Not Valid",
+  "description": "",
+  "id": "api-validation;validation-of-status-code-and-api-response-when-endpoint-is-not-valid;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 13,
+      "name": "@SpaceX_APICheck_InvalidEndPoint_TC02"
+    }
+  ]
 });
 formatter.step({
-  "line": 13,
-  "name": "User validate the Confirmation Id and \"Thank you for your purchase today!\" in Flight Confirmation Screen",
+  "line": 15,
+  "name": "User is hitting the API for \"https://api.spacexdata.com/v4/launches/latesW7t\" and Valid Http Method Type",
   "matchedColumns": [
-    5
+    0
   ],
-  "keyword": "And "
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 16,
+  "name": "User is validating HTTP Response",
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Portland",
-      "offset": 13
+      "val": "https://api.spacexdata.com/v4/launches/latesW7t",
+      "offset": 29
+    }
+  ],
+  "location": "APICheck.ApiRun(String)"
+});
+formatter.result({
+  "duration": 766083100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "APICheck.user_is_validating_HTTP_Response()"
+});
+formatter.result({
+  "duration": 386200,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 24,
+  "name": "Validation of Status Code and API Response when Http Request Type is Invalid",
+  "description": "",
+  "id": "api-validation;validation-of-status-code-and-api-response-when-http-request-type-is-invalid",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 23,
+      "name": "@SpaceX_APICheck_InvalidHttpRequest_TC03"
+    }
+  ]
+});
+formatter.step({
+  "line": 25,
+  "name": "User is hitting the API for \"\u003cEnd point\u003e\" and Invalid Http Method Type",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 26,
+  "name": "User is validating HTTP Response",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 27,
+  "name": "",
+  "description": "",
+  "id": "api-validation;validation-of-status-code-and-api-response-when-http-request-type-is-invalid;",
+  "rows": [
+    {
+      "cells": [
+        "End point",
+        "Http Method"
+      ],
+      "line": 28,
+      "id": "api-validation;validation-of-status-code-and-api-response-when-http-request-type-is-invalid;;1"
     },
     {
-      "val": "Rome",
-      "offset": 28
-    },
-    {
-      "val": "Find Flights",
-      "offset": 48
+      "cells": [
+        "https://api.spacexdata.com/v4/launches/latest",
+        "POST"
+      ],
+      "line": 29,
+      "id": "api-validation;validation-of-status-code-and-api-response-when-http-request-type-is-invalid;;2"
     }
   ],
-  "location": "BlazeDemo.CitySelection(String,String,String)"
+  "keyword": "Examples"
 });
-formatter.result({
-  "duration": 2872874500,
-  "status": "passed"
+formatter.scenario({
+  "line": 29,
+  "name": "Validation of Status Code and API Response when Http Request Type is Invalid",
+  "description": "",
+  "id": "api-validation;validation-of-status-code-and-api-response-when-http-request-type-is-invalid;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 23,
+      "name": "@SpaceX_APICheck_InvalidHttpRequest_TC03"
+    }
+  ]
+});
+formatter.step({
+  "line": 25,
+  "name": "User is hitting the API for \"https://api.spacexdata.com/v4/launches/latest\" and Invalid Http Method Type",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 26,
+  "name": "User is validating HTTP Response",
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Choose This Flight",
-      "offset": 43
+      "val": "https://api.spacexdata.com/v4/launches/latest",
+      "offset": 29
     }
   ],
-  "location": "BlazeDemo.user_select_any_particular_flight_by_click_on_button(String)"
+  "location": "APICheck.InvalidMethodType(String)"
 });
 formatter.result({
-  "duration": 580225200,
+  "duration": 739129000,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "Purchase Flight",
-      "offset": 47
-    }
-  ],
-  "location": "BlazeDemo.passengerDetails(String,DataTable)"
+  "location": "APICheck.user_is_validating_HTTP_Response()"
 });
 formatter.result({
-  "duration": 8870884100,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Thank you for your purchase today!",
-      "offset": 39
-    }
-  ],
-  "location": "BlazeDemo.validateConfirmationID(String)"
-});
-formatter.result({
-  "duration": 73072400,
+  "duration": 137200,
   "status": "passed"
 });
 });

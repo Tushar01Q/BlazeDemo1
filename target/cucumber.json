@@ -3,177 +3,157 @@
     "line": 1,
     "elements": [
       {
-        "line": 3,
-        "name": "",
+        "line": 10,
+        "name": "Validation of Status Code and different-2 Responses when Endpoint is Valid",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 9976092000,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "User initiate the Chrome Driver and login to the application url \"https://blazedemo.com/\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "https://blazedemo.com/",
-                  "offset": 66
-                }
-              ],
-              "location": "BlazeDemo.launchingApp(String)"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 16,
-        "name": "Validation of happy flow of flight booking and Confirmation ID",
-        "description": "",
-        "id": "flight-booking-validation-in-blaze-portal;validation-of-happy-flow-of-flight-booking-and-confirmation-id;;2",
+        "id": "api-validation;validation-of-status-code-and-different-2-responses-when-endpoint-is-valid;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2872874500,
+              "duration": 2418787400,
               "status": "passed"
             },
-            "line": 8,
-            "name": "User select \"Portland\" and \"Rome\" and click on \"Find Flights\" button",
+            "line": 6,
+            "name": "User is hitting the API for \"https://api.spacexdata.com/v4/launches/latest\" and Valid Http Method Type",
             "match": {
               "arguments": [
                 {
-                  "val": "Portland",
-                  "offset": 13
-                },
-                {
-                  "val": "Rome",
-                  "offset": 28
-                },
-                {
-                  "val": "Find Flights",
-                  "offset": 48
+                  "val": "https://api.spacexdata.com/v4/launches/latest",
+                  "offset": 29
                 }
               ],
-              "location": "BlazeDemo.CitySelection(String,String,String)"
+              "location": "APICheck.ApiRun(String)"
             },
             "matchedColumns": [
-              0,
-              1,
-              2
+              0
             ],
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 580225200,
+              "duration": 546540800,
               "status": "passed"
             },
-            "line": 9,
-            "name": "User select any random flight by click on \"Choose This Flight\" button",
+            "line": 7,
+            "name": "User is validating certain attributes in http Response",
             "match": {
-              "arguments": [
-                {
-                  "val": "Choose This Flight",
-                  "offset": 43
-                }
-              ],
-              "location": "BlazeDemo.user_select_any_particular_flight_by_click_on_button(String)"
+              "location": "APICheck.ResponseValidation()"
             },
-            "matchedColumns": [
-              3
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 8870884100,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "User fills the Passenger details and click on \"Purchase Flight\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Purchase Flight",
-                  "offset": 47
-                }
-              ],
-              "location": "BlazeDemo.passengerDetails(String,DataTable)"
-            },
-            "matchedColumns": [
-              4
-            ],
-            "rows": [
-              {
-                "cells": [
-                  "Name",
-                  "Address",
-                  "City",
-                  "State",
-                  "ZipCode",
-                  "CreditCardNo",
-                  "Month",
-                  "Year",
-                  "NameOnCard"
-                ],
-                "line": 11
-              },
-              {
-                "cells": [
-                  "John",
-                  "123 Park Avenue",
-                  "California",
-                  "Texas",
-                  "98335",
-                  "1234 5678 1133 4455",
-                  "09",
-                  "2018",
-                  "John P Carter"
-                ],
-                "line": 12
-              }
-            ],
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 73072400,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "User validate the Confirmation Id and \"Thank you for your purchase today!\" in Flight Confirmation Screen",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Thank you for your purchase today!",
-                  "offset": 39
-                }
-              ],
-              "location": "BlazeDemo.validateConfirmationID(String)"
-            },
-            "matchedColumns": [
-              5
-            ],
-            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "line": 6,
-            "name": "@BlazeDemo_TC01"
+            "line": 4,
+            "name": "@SpaceX_APICheck_ValidEndPoint_TC01"
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "Validation of Status Code and API Response when Endpoint is Not Valid",
+        "description": "",
+        "id": "api-validation;validation-of-status-code-and-api-response-when-endpoint-is-not-valid;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 766083100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User is hitting the API for \"https://api.spacexdata.com/v4/launches/latesW7t\" and Valid Http Method Type",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://api.spacexdata.com/v4/launches/latesW7t",
+                  "offset": 29
+                }
+              ],
+              "location": "APICheck.ApiRun(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 386200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User is validating HTTP Response",
+            "match": {
+              "location": "APICheck.user_is_validating_HTTP_Response()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 13,
+            "name": "@SpaceX_APICheck_InvalidEndPoint_TC02"
+          }
+        ]
+      },
+      {
+        "line": 29,
+        "name": "Validation of Status Code and API Response when Http Request Type is Invalid",
+        "description": "",
+        "id": "api-validation;validation-of-status-code-and-api-response-when-http-request-type-is-invalid;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 739129000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User is hitting the API for \"https://api.spacexdata.com/v4/launches/latest\" and Invalid Http Method Type",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://api.spacexdata.com/v4/launches/latest",
+                  "offset": 29
+                }
+              ],
+              "location": "APICheck.InvalidMethodType(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 137200,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User is validating HTTP Response",
+            "match": {
+              "location": "APICheck.user_is_validating_HTTP_Response()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 23,
+            "name": "@SpaceX_APICheck_InvalidHttpRequest_TC03"
           }
         ]
       }
     ],
-    "name": "Flight Booking validation in Blaze Portal",
+    "name": "API Validation",
     "description": "",
-    "id": "flight-booking-validation-in-blaze-portal",
+    "id": "api-validation",
     "keyword": "Feature",
-    "uri": "FeatureFile/BlazeDemo.feature"
+    "uri": "FeatureFile/APICheck.feature"
   }
 ]
